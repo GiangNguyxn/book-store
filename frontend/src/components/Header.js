@@ -67,7 +67,8 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
+  padding: 10px;
+  background-color: gray;
   z-index: 1000;
 `;
 

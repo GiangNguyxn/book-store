@@ -18,11 +18,9 @@ const ProductDetails = () => {
   const bookData = useLoaderData();
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
-  const [modalIsShowed, setModalIsShowed] = useState(false);
   const addToCartHandler = () => {
     const productData = { ...bookData, quantity: quantity };
     dispatch(addToCart(productData));
-    setModalIsShowed(true);
   };
   return (
     <>
@@ -77,23 +75,7 @@ const ProductDetails = () => {
           </QuantityActions>
         </InfoDetails>
       </Container>
-      {modalIsShowed && (
-        <div>
-          <Backdrop onClick={() => setModalIsShowed(false)} />
-          <Modal>
-            <p>Sản phẩm đã được thêm thành công vào giỏ hàng của bạn</p>
-            <img
-              src={`${process.env.REACT_APP_BACKEND_URL}/` + bookData.imageUrl}
-              alt=""
-            />
-
-            <div>
-              <button onClick={() => setModalIsShowed(false)}>Chọn thêm</button>
-              <Link to={ROUTES.CHECKOUT}>Thanh toán</Link>
-            </div>
-          </Modal>
-        </div>
-      )}
+      
       <Mobile>
         <QuantityActions>
           <span>Số lượng:</span>

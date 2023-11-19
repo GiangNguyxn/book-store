@@ -249,11 +249,11 @@ const AdminProducts = () => {
           </AddForm>
         </Backdrop>
       )}
-
-      <NewProductBtn onClick={() => setFormIsShow(true)}>
-        <img src="/images/plus.svg" alt="" />
+      <Button onClick={() => setFormIsShow(true)}>
         Thêm sản phẩm
-      </NewProductBtn>
+      </Button>
+
+      
       {products.length === 0 && (
         <NoProducts>
           <img src="/images/no-products.svg" alt="" />
@@ -401,25 +401,7 @@ const ProductOldPrice = styled.span``;
 
 const ProductSaleOff = styled.span``;
 
-const NewProductBtn = styled.button`
-  display: block;
-  width: 150px;
-  height: 40px;
-  border-radius: 999px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #004aad;
-  border: none;
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 10px;
-  img {
-    width: 20px;
-    height: 20px;
-  }
-`;
+
 
 const AddForm = styled.form`
   position: absolute;

@@ -22,6 +22,9 @@ const RootLayout = () => {
       <main>
         <Outlet />
       </main>
+      <footer  style={{textAlign:"center", padding:"20px", background:"gray"}}>
+        Nguyễn Nho Giang
+      </footer>
     </>
   );
 };
